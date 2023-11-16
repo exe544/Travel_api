@@ -10,10 +10,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
+/**
+ * @group Auth endpoints
+ */
 class LoginController extends Controller
 {
     /**
-     * Handle the incoming request.
+     * POST Login
+     *
+     * Login with the existing user.
+     *
+     * @response {"access_token":"1|a9ZcYzIrLURVGx6Xe41HKj1CrNsxRxe4pLA2oISo"}
+     * @response 422 {"error": "Sorry, wrong credentials."}
      */
     public function __invoke(LoginRequest $request)
     {
