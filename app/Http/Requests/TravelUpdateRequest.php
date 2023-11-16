@@ -25,7 +25,7 @@ class TravelUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'min:3', 'max:255', Rule::unique('travels')->ignore($this->route('travel')->id)],
+            'name' => ['required', 'string', 'min:3', 'max:255', Rule::unique('travels')->ignore($this->route('travel')->id],
             'is_public' => ['boolean'],
             'description' => ['required', 'string'],
             'number_of_days' => ['required', 'integer'],
